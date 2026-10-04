@@ -41,14 +41,14 @@
 				&disc_mode_toggle   &kp KP_N1
 
 				/* Taps: center, top, bottom, left, right */
-				&kp KP_N3              &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
+				&kp KP_N3           &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
 
 				/* Swipes: up, down, left, right */
 				&kp PG_UP           &kp PG_DN       &kp HOME        &kp END
 
 				/* Rotary: top CW/CCW, bottom CW/CCW, left CW/CCW, right CW/CCW */
-				&kp VOL_UP          &kp VOL_DN
-				&kp VOL_UP          &kp VOL_DN
+				&kp C_VOL_UP        &kp C_VOL_DN
+				&kp C_BRI_UP        &kp C_BRI_DN
 				&kp LEFT            &kp RIGHT
 				&kp UP              &kp DOWN
 
@@ -63,14 +63,14 @@
 				&disc_mode_toggle   &kp KP_N2
 
 				/* Taps */
-				&kp KP_N4             &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
+				&kp KP_N4           &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
 
 				/* Swipes */
 				&kp PG_UP           &kp PG_DN       &kp HOME        &kp END
 
 				/* Rotary */
-				&kp VOL_UP          &kp VOL_DN
-				&kp VOL_UP          &kp VOL_DN
+				&kp C_VOL_UP        &kp C_VOL_DN
+				&kp C_BRI_UP        &kp C_BRI_DN
 				&kp LEFT            &kp RIGHT
 				&kp UP              &kp DOWN
 
