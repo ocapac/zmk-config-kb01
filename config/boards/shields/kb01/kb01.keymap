@@ -1,81 +1,26 @@
 #include <dt-bindings/zmk/keys.h>
 
-/*
- * Virtual key positions reported by zmk-mpr121-module01:
- *
- * 0:  Button 0, P1.04
- * 1:  Button 1, P1.06
- *
- * 2:  Tap center
- * 3:  Tap top
- * 4:  Tap bottom
- * 5:  Tap left
- * 6:  Tap right
- *
- * 7:  Swipe up
- * 8:  Swipe down
- * 9:  Swipe left
- * 10: Swipe right
- *
- * 11: Rotary top clockwise
- * 12: Rotary top counter-clockwise
- * 13: Rotary bottom clockwise
- * 14: Rotary bottom counter-clockwise
- * 15: Rotary left clockwise
- * 16: Rotary left counter-clockwise
- * 17: Rotary right clockwise
- * 18: Rotary right counter-clockwise
- *
- * 19: Proximity enter
- * 20: Proximity exit
- * 21: Proximity idle, no finger for more than 30 seconds
- */
-
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
 			bindings = <
-				/* Physical buttons */
-				&disc_mode_toggle   &kp KP_N1
-
-				/* Taps: center, top, bottom, left, right */
-				&kp KP_N3           &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
-
-				/* Swipes: up, down, left, right */
-				&kp PG_UP           &kp PG_DN       &kp HOME        &kp END
-
-				/* Rotary: top CW/CCW, bottom CW/CCW, left CW/CCW, right CW/CCW */
-				&kp C_VOL_UP        &kp C_VOL_DN
-				&kp C_BRI_UP        &kp C_BRI_DN
-				&kp LEFT            &kp RIGHT
-				&kp UP              &kp DOWN
-
-				/* Proximity: enter, exit, idle */
-				&mo 1               &none           &kp X
+				&disc_mode_toggle &kp B
+				&kp C &kp D &kp E &kp F &kp G
+				&kp H &kp I &kp J &kp K
+				&kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S
+				&mo 1 &none &kp T
 			>;
 		};
 
 		nav_layer {
 			bindings = <
-				/* Physical buttons */
-				&disc_mode_toggle   &kp KP_N2
-
-				/* Taps */
-				&kp KP_N4           &kp UP          &kp DOWN        &kp LEFT        &kp RIGHT
-
-				/* Swipes */
-				&kp PG_UP           &kp PG_DN       &kp HOME        &kp END
-
-				/* Rotary */
-				&kp C_VOL_UP        &kp C_VOL_DN
-				&kp C_BRI_UP        &kp C_BRI_DN
-				&kp LEFT            &kp RIGHT
-				&kp UP              &kp DOWN
-
-				/* Proximity */
-				&mo 1               &none           &kp X
+				&disc_mode_toggle &kp U
+				&kp V &kp W &kp X &kp Y &kp Z
+				&kp A &kp B &kp C &kp D
+				&kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L
+				&mo 1 &none &kp M
 			>;
 		};
 	};
