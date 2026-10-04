@@ -3,9 +3,8 @@
 
 / {
 	behaviors {
-		DISC_MODE_TOGGLE: disc_mode_toggle {
+		disc_mode_toggle: disc_mode_toggle {
 			compatible = "zmk,behavior-disc-mode-toggle";
-			label = "DISC_MODE_TOGGLE";
 			#binding-cells = <0>;
 		};
 	};
