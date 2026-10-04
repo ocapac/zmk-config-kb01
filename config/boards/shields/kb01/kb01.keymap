@@ -11,7 +11,7 @@
 				&kp C &kp D &kp E &kp F &kp G
 				&kp H &kp I &kp J &kp K
 				&kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S
-				&mo 1 &none &kp T
+				&none &none &none
 			>;
 		};
 
@@ -21,7 +21,7 @@
 				&kp V &kp W &kp X &kp Y &kp Z
 				&kp A &kp B &kp C &kp D
 				&kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L
-				&mo 1 &none &kp M
+				&none &none &none
 			>;
 		};
 	};
