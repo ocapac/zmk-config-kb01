@@ -33,7 +33,7 @@
 	pinctrl-0 = <&kb01_i2c0_default>;
 	pinctrl-1 = <&kb01_i2c0_sleep>;
 	pinctrl-names = "default", "sleep";
-	clock-frequency = <400000>;
+	clock-frequency = <100000>;
 
 	kb01_kscan: mpr121@5a {
 		compatible = "zmk,kscan-mpr121-disc";
@@ -58,8 +58,8 @@
 		 * - degrees for rotary angle threshold
 		 * - ms for idle timeout
 		 */
-		touch-threshold = <40>;
-		prox-threshold = <16>;
+		touch-threshold = <12>;
+		prox-threshold = <6>;
 		center-dead-radius-mm = <3>;
 		swipe-threshold-mm = <6>;
 		rotary-threshold-deg = <25>;
