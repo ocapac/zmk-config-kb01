@@ -2,19 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: YOUR_GITHUB_USER
-      url-base: https://github.com/YOUR_GITHUB_USER
-
+    - name: ocapac
+      url-base: https://github.com/ocapac
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-
     - name: zmk-mpr121-module01
-      remote: YOUR_GITHUB_USER
+      remote: ocapac
       revision: main
       path: modules/zmk-mpr121-module01
-
   self:
     path: config
