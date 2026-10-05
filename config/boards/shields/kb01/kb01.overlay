@@ -2,6 +2,33 @@
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 
 / {
+	/* 1. Standard ZMK direct GPIO scanning for the two physical buttons */
+	kscan_buttons: kscan_buttons {
+		compatible = "zmk,kscan-gpio-direct";
+		input-gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+			      <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+
+	/* 2. Merge the physical buttons and the MPR121 Disc into one matrix */
+	kscan_composite: kscan_composite {
+		compatible = "zmk,kscan-composite";
+		
+		kscan0 {
+			kscan = <&kscan_buttons>;
+			/* Buttons will be positions 0 and 1 */
+		};
+		
+		kscan1 {
+			kscan = <&mpr121_disc>;
+			col-offset = <2>; 
+			/* Disc gestures will be positions 2 through 21 */
+		};
+	};
+
+	chosen {
+		zmk,kscan = &kscan_composite;
+	};
+
 	behaviors {
 		disc_mode_toggle: disc_mode_toggle {
 			compatible = "zmk,behavior-disc-mode-toggle";
@@ -35,40 +62,17 @@
 	pinctrl-names = "default", "sleep";
 	clock-frequency = <100000>;
 
-	kb01_kscan: mpr121@5a {
+	mpr121_disc: mpr121@5a {
 		compatible = "zmk,kscan-mpr121-disc";
 		reg = <0x5a>;
 
-		/*
-		 * MPR121 IRQ on D4 / P0.22
-		 */
 		irq-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-		/*
-		 * Two direct physical buttons:
-		 * P1.04 and P1.06
-		 */
-		input-gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
-			      <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-
-		/*
-		 * Disc gesture tuning.
-		 * Units:
-		 * - mm for distances
-		 * - degrees for rotary angle threshold
-		 * - ms for idle timeout
-		 */
 		touch-threshold = <12>;
 		prox-threshold = <6>;
 		center-dead-radius-mm = <3>;
 		swipe-threshold-mm = <6>;
 		rotary-threshold-deg = <25>;
 		idle-timeout-ms = <30000>;
-	};
-};
-
-/ {
-	chosen {
-		zmk,kscan = &kb01_kscan;
 	};
 };
