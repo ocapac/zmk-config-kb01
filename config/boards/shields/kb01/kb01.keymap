@@ -7,7 +7,7 @@
 
 		default_layer {
 			bindings = <
-				&kp KP_N1 &kp KP_N2
+				&disc_mode_toggle &kp KP_N1
 				&kp C &kp D &kp E &kp F &kp G
 				&kp H &kp I &kp J &kp K
 				&kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S
@@ -17,7 +17,7 @@
 
 		nav_layer {
 			bindings = <
-				&kp KP_N1 &kp KP_N2
+				&kp KP_N0 &kp KP_N1
 				&kp V &kp W &kp X &kp Y &kp Z
 				&kp A &kp B &kp C &kp D
 				&kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L
