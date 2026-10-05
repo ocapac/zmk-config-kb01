@@ -12,6 +12,9 @@
 	/* 2. Merge the physical buttons and the MPR121 Disc into one matrix */
 	kscan_composite: kscan_composite {
 		compatible = "zmk,kscan-composite";
+
+		rows = <1>;
+		columns = <22>;
 		
 		kscan0 {
 			kscan = <&kscan_buttons>;
@@ -20,7 +23,6 @@
 		
 		kscan1 {
 			kscan = <&mpr121_disc>;
-			col-offset = <2>; 
 			/* Disc gestures will be positions 2 through 21 */
 		};
 	};
