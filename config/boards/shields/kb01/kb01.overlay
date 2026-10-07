@@ -72,9 +72,9 @@
 
 		touch-threshold = <12>;
 		prox-threshold = <6>;
-		center-dead-radius-mm = <6>;
+		center-dead-radius-mm = <3>;
 		swipe-threshold-mm = <6>;
-		rotary-threshold-deg = <10>;
+		rotary-threshold-deg = <15>;
 		idle-timeout-ms = <30000>;
 	};
 };
