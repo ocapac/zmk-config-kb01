@@ -87,13 +87,13 @@
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
 		tap-move-max-mm = <3>;
-		rotary-threshold-deg = <25>;
+		rotary-threshold-deg = <20>;
 		idle-timeout-ms = <30000>;
 
 		/* Cursor velocity parameters */
 		velocity-divisor = <1200>;
 		velocity-exponent = <150>;
-		velocity-max = <4>;
+		velocity-max = <64>;
 		velocity-decay-percent = <85>;
 	};
 };
