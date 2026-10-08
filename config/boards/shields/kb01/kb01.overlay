@@ -41,6 +41,7 @@
 		disc_mode_toggle: disc_mode_toggle {
 			compatible = "zmk,behavior-disc-mode-toggle";
 			#binding-cells = <0>;
+			label = "DISC_MODE_TOGGLE";
 		};
 	};
 };
@@ -70,17 +71,29 @@
 	pinctrl-names = "default", "sleep";
 	clock-frequency = <100000>;
 
-	mpr121_disc: mpr121@5a {
+		mpr121_disc: mpr121@5a {
 		compatible = "zmk,kscan-mpr121-disc";
 		reg = <0x5a>;
 
 		irq-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
+		/* Touch/proximity thresholds */
 		touch-threshold = <12>;
 		prox-threshold = <6>;
+
+		/* Gesture detection parameters */
 		center-dead-radius-mm = <3>;
 		swipe-threshold-mm = <6>;
-		rotary-threshold-deg = <15>;
+		swipe-duration-max-ms = <500>;
+		tap-duration-max-ms = <250>;
+		tap-move-max-mm = <3>;
+		rotary-threshold-deg = <25>;
 		idle-timeout-ms = <30000>;
+
+		/* Cursor velocity parameters */
+		velocity-divisor = <1200>;
+		velocity-exponent = <150>;
+		velocity-max = <8>;
+		velocity-decay-percent = <85>;
 	};
 };
