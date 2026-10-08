@@ -4,7 +4,7 @@
 / {
 	/* Virtual input device for cursor/scroll reporting */
 	disc_input: disc_input {
-		compatible = "zephyr,input-dummy";
+		compatible = "zmk,virtual-input";
 		status = "okay";
 	};
 
