@@ -82,7 +82,7 @@
 		prox-threshold = <6>;
 
 		/* Gesture detection parameters */
-		center-dead-radius-mm = <3>;
+		center-dead-radius-mm = <2>;
 		swipe-threshold-mm = <6>;
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
@@ -91,7 +91,7 @@
 		idle-timeout-ms = <30000>;
 
 		/* Cursor velocity parameters */
-		velocity-divisor = <1200>;
+		velocity-divisor = <2400>;
 		velocity-exponent = <400>;
 		velocity-max = <127>;
 		velocity-decay-percent = <85>;
