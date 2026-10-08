@@ -94,7 +94,7 @@
 		velocity-slow-distance-mm = <5>;
 		velocity-slow-value = <2>;
 		velocity-max-distance-mm = <5>;
-		velocity-max-value = <16>;
+		velocity-max-value = <8>;
 		velocity-decay-percent = <85>;
 	};
 };
