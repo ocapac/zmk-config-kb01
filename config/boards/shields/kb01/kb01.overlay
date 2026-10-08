@@ -1,4 +1,4 @@
-#include <zephyr/dt-bindings/gpio/gpio.h>
+i#include <zephyr/dt-bindings/gpio/gpio.h>
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 
 / {
@@ -84,7 +84,7 @@
 		prox-threshold = <6>;
 
 		/* Gesture detection parameters */
-		center-dead-radius-mm = <0>;
+		center-dead-radius-mm = <0.5>;
 		swipe-threshold-mm = <6>;
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
