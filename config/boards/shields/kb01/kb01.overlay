@@ -91,7 +91,7 @@
 		idle-timeout-ms = <30000>;
 
 		/* Cursor velocity parameters */
-		velocity-divisor = <800>;
+		velocity-divisor = <1200>;
 		velocity-exponent = <300>;
 		velocity-max = <32>;
 		velocity-decay-percent = <85>;
