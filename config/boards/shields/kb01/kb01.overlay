@@ -92,7 +92,7 @@
 
 		/* Cursor velocity parameters */
 		velocity-divisor = <1200>;
-		velocity-exponent = <200>;
+		velocity-exponent = <400>;
 		velocity-max = <127>;
 		velocity-decay-percent = <85>;
 	};
