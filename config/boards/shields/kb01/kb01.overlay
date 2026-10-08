@@ -90,10 +90,11 @@
 		rotary-threshold-deg = <20>;
 		idle-timeout-ms = <30000>;
 
-		/* Cursor velocity parameters */
-		velocity-divisor = <600>;
-		velocity-exponent = <300>;
-		velocity-max = <32>;
+		/* Cursor velocity curve parameters */
+		velocity-slow-distance-mm = <3>;
+		velocity-slow-value = <2>;
+		velocity-max-distance-mm = <12>;
+		velocity-max-value = <16>;
 		velocity-decay-percent = <85>;
 	};
 };
