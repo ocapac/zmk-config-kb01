@@ -91,9 +91,9 @@
 		idle-timeout-ms = <30000>;
 
 		/* Cursor velocity curve parameters */
-		velocity-slow-distance-mm = <3>;
+		velocity-slow-distance-mm = <5>;
 		velocity-slow-value = <2>;
-		velocity-max-distance-mm = <12>;
+		velocity-max-distance-mm = <5>;
 		velocity-max-value = <16>;
 		velocity-decay-percent = <85>;
 	};
