@@ -92,9 +92,9 @@
 
 		/* Cursor velocity curve parameters */
 		velocity-slow-distance-mm = <5>;
-		velocity-slow-value = <2>;
+		velocity-slow-value = <8>;
 		velocity-max-distance-mm = <5>;
-		velocity-max-value = <8>;
+		velocity-max-value = <32>;
 		velocity-decay-percent = <85>;
 	};
 };
