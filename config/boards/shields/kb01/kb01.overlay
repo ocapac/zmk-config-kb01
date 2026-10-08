@@ -71,7 +71,7 @@
 	pinctrl-names = "default", "sleep";
 	clock-frequency = <100000>;
 
-		mpr121_disc: mpr121@5a {
+	mpr121_disc: mpr121@5a {
 		compatible = "zmk,kscan-mpr121-disc";
 		reg = <0x5a>;
 
