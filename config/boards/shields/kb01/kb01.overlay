@@ -77,6 +77,8 @@
 
 		irq-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
+		sample-period-ms = <8>;
+
 		/* Touch/proximity thresholds */
 		touch-threshold = <12>;
 		prox-threshold = <6>;
