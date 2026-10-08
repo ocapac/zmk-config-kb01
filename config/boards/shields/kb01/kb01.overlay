@@ -77,14 +77,14 @@
 
 		irq-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-		sample-period-ms = <8>;
+		sample-period-ms = <4>;
 
 		/* Touch/proximity thresholds */
 		touch-threshold = <12>;
 		prox-threshold = <6>;
 
 		/* Gesture detection parameters */
-		center-dead-radius-mm = <1>;
+		center-dead-radius-mm = <0>;
 		swipe-threshold-mm = <6>;
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
@@ -93,10 +93,10 @@
 		idle-timeout-ms = <30000>;
 
 		/* Cursor velocity curve parameters */
-		velocity-slow-distance-mm = <7>;
-		velocity-slow-value = <16>;
-		velocity-max-distance-mm = <10>;
-		velocity-max-value = <32>;
+		velocity-slow-distance-mm = <6>;
+		velocity-slow-value = <12>;
+		velocity-max-distance-mm = <9>;
+		velocity-max-value = <36>;
 		velocity-decay-percent = <85>;
 	};
 };
