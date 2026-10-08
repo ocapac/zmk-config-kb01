@@ -2,6 +2,12 @@
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 
 / {
+	/* Enable ZMK pointing input listener */
+	pointing_listener {
+		compatible = "zmk,input-listener";
+		device = <&mpr121_disc>;
+	};
+
 	/* 1. Standard ZMK direct GPIO scanning for the two physical buttons */
 	kscan_buttons: kscan_buttons {
 		compatible = "zmk,kscan-gpio-direct";
