@@ -83,7 +83,7 @@
 
 		/* Gesture detection parameters */
 		center-dead-radius-mm = <3>;
-		swipe-threshold-mm = <6>;
+		swipe-threshold-mm = <8>;
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
 		tap-move-max-mm = <3>;
@@ -93,7 +93,7 @@
 		/* Cursor velocity parameters */
 		velocity-divisor = <1200>;
 		velocity-exponent = <150>;
-		velocity-max = <8>;
+		velocity-max = <16>;
 		velocity-decay-percent = <85>;
 	};
 };
