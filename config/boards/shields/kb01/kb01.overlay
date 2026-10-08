@@ -84,7 +84,7 @@
 		prox-threshold = <6>;
 
 		/* Gesture detection parameters */
-		center-dead-radius-mm = <1>;
+		center-dead-radius-mm = <0>;
 		swipe-threshold-mm = <6>;
 		swipe-duration-max-ms = <500>;
 		tap-duration-max-ms = <250>;
